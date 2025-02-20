@@ -1,0 +1,97 @@
+@mixin textRegular(){
+    color: #000000;
+    font-weight: 400;
+}
+@mixin textMedium(){
+    color: #000000;
+    font-weight: 500;
+}
+@mixin textBold(){
+    color: #000000;
+    font-weight: 700;
+}
+
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexSpace(){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexColumn(){
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin accentButton(){
+    @include textRegular();
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 2%;
+    text-align: center;
+    padding: 22px 50px;
+    background-color: $accentColor;
+    cursor: pointer;
+    &:hover{
+        background-color: #509498;
+        transition: 0.3s ease-out;
+    } 
+}
+@mixin accentButton2(){
+    border: 1px solid #000;
+    background-color: transparent;
+    @include textMedium();
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    &_next{
+        background-color: transparent;
+    }
+    &:active{
+        background-color: #000;
+        color: #fff;
+    } 
+}
+
+@mixin sameText(){
+    @include textMedium();
+    line-height: 140%;
+    letter-spacing: 0.02em;
+}
+
+@mixin sameTextH1(){
+    @include textMedium();
+    font-size: 55px;
+    line-height: 110%;
+    letter-spacing: 2%;
+}
+
+@mixin sameTextH2(){
+    @include textMedium();
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 2%;
+}
+
+@mixin Logotype(){
+    &__logo{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        &_title{
+            @include textMedium();
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 10%;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+

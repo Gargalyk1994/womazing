@@ -1,0 +1,149 @@
+@import '../../../../../../../shared/commonStyles/reset.min';
+@import '../../../../../../../shared/commonStyles/mixins';
+@import '../../../../../../../shared/commonStyles/vars';
+
+.heading{
+    &__for-product{
+        padding: 110px 0 102px;
+    }
+}
+
+.product-item{
+    margin-bottom: 130px;
+    display: flex;
+    align-items: center;
+    gap: 74px;
+    &__block-image{
+        max-width: 536px;
+        height: 729px;
+    }
+    &__block-options{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+
+.block-image{
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.block-options{
+    &__box-price{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__price{
+        @include textMedium();
+        color: $colorPrice;
+        font-size: 40px;
+        line-height: 140%;
+        letter-spacing: 2%;
+        &::before{
+            content: "\0024";
+        }
+        &_old{
+            @include textMedium();
+            color: $colorPriceOld;
+            font-size: 30px;
+            line-height: 140%;
+            letter-spacing: 2%;
+            text-decoration-line: line-through;
+            &::before{
+                content: "\0024";
+            }
+        }
+    }
+    &__btns{
+        display: flex;
+        gap: 10px;
+    }
+    &__quantity{
+        border: 1px solid #afafaf;
+        background-color: #fff;
+        width: 68px;
+        height: 68px;
+    }
+    &__to-cart{
+        @include accentButton();
+    }
+}
+
+.size{
+    &__title{
+        @include textMedium();
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        margin-bottom: 34px;
+    }
+    &__items{
+        display: flex;
+        gap: 14px;
+    }
+    &__item{
+        width: 41px;
+        height: 41px;
+        border: 1px solid black;
+        background-color: #fff;
+        padding: 0;
+        @include textMedium();
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        &_active{
+            color: #fff;
+            background-color: black;
+        }
+    }
+}
+
+.color{
+    &__title{
+        @include textMedium();
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        margin-bottom: 34px;
+    }
+    &__items{
+        display: flex;
+        gap: 14px;
+    }
+    &__item{
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        &_1{
+            background-color: #927876;
+        }
+        &_2{
+            background-color: #d4d4d4;
+        }
+        &_3{
+            background-color: #fd9696;
+        }
+        &_4{
+            background-color: #fdc796;
+        }
+        &_active{
+            border: 1px solid black;
+        }
+    }
+}
+
+.similar-products{
+    &__title{
+        @include sameTextH2();
+        margin-bottom: 67px;
+    }
+    &__wrap{
+        justify-content: flex-start;
+    }
+}
+

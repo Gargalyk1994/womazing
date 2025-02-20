@@ -1,5 +1,6 @@
+import type { Metadata } from "next";
+import { Footer, HeaderMain } from "../../shared/components/shared";
 import { Raleway } from "next/font/google";
-import "./globals.scss";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -7,7 +8,12 @@ const raleway = Raleway({
 });
 
 
-export default function Root1Layout({
+export const metadata: Metadata = {
+  title: "Womazing",
+  description: "Интернет-магазин Womazing",
+};
+
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -15,7 +21,9 @@ export default function Root1Layout({
   return (
     <html lang="en">
       <body className={`${raleway.className}`}>
+        <HeaderMain />
         {children}
+        <Footer />
       </body>
     </html>
   );

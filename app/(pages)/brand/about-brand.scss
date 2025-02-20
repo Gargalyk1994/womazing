@@ -1,0 +1,40 @@
+@import '../../../shared/commonStyles/reset.min';
+@import '../../../shared/commonStyles/mixins';
+@import '../../../shared/commonStyles/vars';
+
+.brand-content{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 130px;
+        margin-bottom: 130px;
+    }
+    &__block{
+        display: flex;
+        gap: 94px;
+        align-items: center;
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+    }
+    &__heading{
+        @include textMedium();
+        font-size: 25px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+    }
+    &__text{
+        @include textMedium();
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+    }
+    &__to-store{
+        @include accentButton();
+        width: 260px;
+        margin: 0 auto;
+    }
+}

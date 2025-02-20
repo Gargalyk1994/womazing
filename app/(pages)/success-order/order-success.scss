@@ -1,0 +1,31 @@
+@import '../../../shared/commonStyles/reset.min';
+@import '../../../shared/commonStyles/mixins';
+@import '../../../shared/commonStyles/vars';
+
+.success{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+    &__info{
+        display: flex;
+        align-items: center;
+        gap: 44px;
+    }
+    &__wrap-info{
+        @include sameText();
+        font-size: 17px;
+    }
+    &__info-text{
+        font-size: 25px;
+        margin-bottom: 17px;
+    }
+    &__out{
+        @include accentButton();
+        color: $accentColor;
+        background-color: transparent;
+        border: 1px solid $accentColor;
+        &:hover{
+            color: #fff;
+        }
+    }
+}

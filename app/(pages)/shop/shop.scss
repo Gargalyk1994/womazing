@@ -1,0 +1,47 @@
+@import '../../../shared/commonStyles/reset.min';
+@import '../../../shared/commonStyles/mixins';
+@import '../../../shared/commonStyles/vars';
+
+.heading{
+    &__title{
+        margin-bottom: 30px;
+    }
+}
+
+.catalog{
+    margin-bottom: 130px;
+    &__nav-pages{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__page{
+        padding: 10px 16px;
+        @include accentButton2();
+    }
+}
+
+.btns-categories{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    &__item{
+        padding: 19px 65px;
+        @include accentButton2();
+        margin-bottom: 92px;
+        &_active{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+.counter-products{
+    @include textMedium();
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: $colorActiveBread;
+    margin-bottom: 65px;
+}

@@ -1,0 +1,104 @@
+@import '../../../shared/commonStyles/reset.min';
+@import '../../../shared/commonStyles/mixins';
+@import '../../../shared/commonStyles/vars';
+
+.contacts{
+    &__block-map{
+        height: 476px;
+        margin-bottom: 130px;
+    }
+    &__map{
+        height: 100%;
+        border: 1px solid #ccc;
+    }
+    &__info-block{
+        display: flex;
+        gap: 100px;
+        margin-bottom: 130px;
+    }
+    &__title-phone{
+        @include sameText();
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    &__title-email{
+        @include sameText();
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    &__title-address{
+        @include sameText();
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    &__phone{
+        @include sameText();
+        font-size: 20px;
+    }
+    &__email{
+        @include sameText();
+        font-size: 20px;
+    }
+    &__address{
+        @include sameText();
+        font-size: 20px;
+    }
+    &__wrapper-form{
+        margin-bottom: 130px;
+    }
+}
+
+.wrapper-form{
+    &__heading{
+        @include sameText();
+        font-size: 25px;
+        margin-bottom: 62px;
+    }
+    &__form-send{
+        max-width: 443px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 62px;
+        &input::placeholder{
+            @include sameText();
+            font-size: 17px;
+            color: $colorActiveBread;
+        }
+    }
+    &__status-send{
+        @include sameText();
+        font-size: 17px;
+        background-color: $colorAccentBack;;
+        max-width: 443px;
+        padding: 30px 76px;
+        height: 84px;
+    }
+}
+
+.form-send{
+    &__name{
+        max-width: 350px;
+        height: 40px;
+        border-bottom: 1px solid black;
+    }
+    &__email{
+        max-width: 350px;
+        height: 40px;
+        border-bottom: 1px solid black;
+    }
+    &__phone{
+        max-width: 350px;
+        height: 40px;
+        border-bottom: 1px solid black;
+    }
+    &__message{
+        height: 143px;
+        border-bottom: 1px solid black;
+    }
+    &__button{
+        width: 190px;
+        height: 68px;
+        @include accentButton();
+    }
+}

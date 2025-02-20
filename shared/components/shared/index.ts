@@ -1,0 +1,15 @@
+export { Header } from "./header";
+export { HeaderMain } from "./header-main";
+export { HeaderPage } from "./header-page";
+export { PhoneNumber } from "./phone-number";
+export { ProductCard } from "./product-card";
+export { Categories } from "./categories";
+export { ProductsGroupList } from "./products-group-list";
+export { ChoiceProduct  } from "./choice-product";
+export { VariantsSizes } from "./variants-sizes";
+export { VariantsColors } from "./variants-colors";
+export { BtnAddToCart } from "./btn-add-to-cart";
+export { CartSheet } from "./cart-sheet";
+export { CartButton } from "./cart-button";
+export { CountButton } from "./count-button";
+export { Footer } from "./footer";

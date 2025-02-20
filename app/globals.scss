@@ -1,0 +1,317 @@
+
+@import '../shared/commonStyles/reset.min';
+@import '../shared/commonStyles/mixins';
+@import '../shared/commonStyles/vars';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    box-sizing: border-box;
+    font-size: 14px;
+    scroll-behavior: smooth;
+    transition: 0.5s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+  
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
+    border-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+
+summary{
+    display: block;
+}
+
+summary::-webkit-details-marker{
+    display: none;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.disabled-btn{
+    cursor: no-drop;
+    opacity: 20%;
+}
+
+.display-none{
+    display: none;
+}
+
+.navigation{
+    &__links{
+        display: flex;
+        gap: 45px;
+        a{
+            @include textRegular();
+            font-size: 15px;
+            line-height: 140%;
+            letter-spacing: 2%;
+            &:hover{
+                color: $accentColor;
+            }
+        }
+    }
+}
+
+.header{
+    @include flexSpace();
+    @include Logotype();
+    padding-top: 51px;
+    &__contacts{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    &__back-phone{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        background-color: rgba(110, 156, 159, 0.70);
+
+    }
+    &__image-phone{
+        display: flex;
+        gap: 10px;
+        svg{
+            &:hover{
+                background-color: $accentColor;
+                width: 27px;
+                height: 27px;
+            }
+            &:hover path{
+                fill: #fff;
+            }
+        }
+    }
+    &__number-phone{
+        @include textRegular();
+        font-size: 15px;
+        line-height: 140%;
+        letter-spacing: 2%;
+    }
+    &__order-callback{
+        position: relative;
+        padding: 70px;
+        width: 491px;
+        height: 503px;
+        background-color: #fff;
+        position: fixed;
+        top: 20%;
+        right: 35%;
+        z-index: 10;
+    }
+}
+
+.order-callback{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    &__close{
+        background-color: transparent;
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+    &__title{
+        @include sameText();
+        font-size: 25px;
+    }
+    &__input{
+        max-width: 350px;
+        height: 40px;
+        border-bottom: 1px solid black;
+    }
+    &__submit{
+        @include accentButton();
+        width: 351px;
+        height: 68px;
+        font-size: 17px;
+        background-color: $accentColor;
+        cursor: pointer;
+    }
+}
+
+.heading{
+    padding: 190px 0 214px;
+    &__title{
+        @include sameTextH1();
+        margin-bottom: 30px;
+    }
+    &__breadcrumbs{
+        display: flex;
+        gap: 5px;
+    }
+    &__breadcrumbs-item{
+        @include textMedium();
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        &:not(:last-of-type)::after{
+            content: "\2014";
+            width: 160px;
+            padding-left: 5px;
+        }
+        &:last-of-type{
+            color: $colorActiveBread;
+        }
+        &:hover{
+            color: $accentColor;
+        }
+    }
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 65px;
+    &__card{
+        @include flexCenter();
+        flex-direction: column;
+    }
+    &__image-box{
+        width: 25em;
+        height: 34em;
+        position: relative;
+        transition: 0.3s ease-out;
+        &:hover{
+            transform: scale(1.01);
+            &::before{
+                opacity: 0.5;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $accentColor;
+            transition: 0.5s;
+            opacity: 0;
+        }
+        &::before{
+            content: url("../public/images/arrow.png");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 24px;
+    }
+    &__name{
+        @include textMedium();
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 2%;
+        margin-bottom: 10px;
+    }
+    &__price-box{
+        display: flex;
+        gap: 10px;
+    }
+    &__price{
+        @include textMedium();
+        color: $colorPrice;
+        font-size: 15px;
+        line-height: 140%;
+        letter-spacing: 2%;
+        &::before{
+            content: "\0024";
+        }
+        &_old{
+            @include textMedium();
+            color: $colorPriceOld;
+            font-size: 15px;
+            line-height: 140%;
+            letter-spacing: 2%;
+            text-decoration-line: line-through;
+            &::before{
+                content: "\0024";
+            }
+        }
+    }
+}
+
+.footer{
+    min-height: 363px;
+    @include Logotype();
+    background-color: $colorAccentBack;
+    &__wrapper{
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left-block{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    &__copyright{
+        @include textRegular();
+        font-size: 13px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+    }
+    &__navigation-menu{
+        margin-bottom: 45px;
+    }
+    &__nav-categories{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 107px;
+    }
+    &__nav-category{
+        @include textRegular();
+        font-size: 13px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+    }
+    &__right-block{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 20px;
+    }
+    &__contacts{
+        @include textRegular();
+        font-size: 15px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        text-align: right;
+    }
+    &__social-icons{
+        display: flex;
+        gap: 12px;
+    }
+}

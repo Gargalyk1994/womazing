@@ -1,0 +1,187 @@
+@import '../../shared/commonStyles/reset.min';
+@import '../../shared/commonStyles/mixins';
+@import '../../shared/commonStyles/vars';
+
+.main-block{
+    &__content{
+        background: linear-gradient(to right, #fff 55%, $colorAccentBack 45%);
+        margin-bottom: 130px;
+    }
+    &__sliders{
+        display: flex;
+        align-items: center;
+        padding-top: 41px;
+    }
+}
+
+.text-slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__heading{
+        @include sameTextH1();
+        margin-bottom: 45px;
+    }
+    &__text{
+        @include textRegular();
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 2%;
+        margin-bottom: 52px;
+    }
+    &__btns-box{
+        display: flex;
+        margin-bottom: 126px;
+    }
+    &__btn-arrow{
+        padding: 20px 26px;
+        background-color: #6e9c9f1a;
+        cursor: pointer;
+        &:hover{
+            background-color: #509498;
+        }
+        &:hover path{
+            stroke: #fff;
+        }
+    }
+    &__button{
+        @include accentButton();
+    }
+    &__nav{
+        margin: 0 auto;
+    }
+    &__bullitt{
+        background-color: transparent;
+    }
+}
+.slider-image{
+    position: relative;
+    &__static-photo1{
+        position: absolute;
+        top: 18%;
+        left: 75%;
+    }
+    &__static-photo2{
+        position: absolute;
+        bottom: 0;
+        left: -30%;
+    }
+}
+
+.new-collection{
+    margin-bottom: 130px;
+    &__heading{
+        @include sameTextH2();
+        margin-bottom: 92px;
+    }
+    &__btn-box{
+        text-align: center;
+    }
+    &__btn{
+        @include accentButton();
+        color: $accentColor;;
+        background-color: #fff;
+        border: 1px solid $accentColor;
+        &:hover{
+            color: #fff;
+            background-color: $accentColor;
+        } 
+    }
+}
+
+.important-for-us{
+    margin-bottom: 130px;
+    &__heading{
+        @include sameTextH2();
+        margin-bottom: 92px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    &__item{
+        flex-basis: 305px;
+    }
+    svg{
+        margin-bottom: 37px;
+    }
+    &__title{
+        @include textMedium();
+        font-size: 25px;
+        line-height: 140%;
+        letter-spacing: 2%;
+        margin-bottom: 24px;
+    }
+    &__description{
+        @include textMedium();
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 2%;
+    }
+}
+
+.dream-of-team{
+    margin-bottom: 130px;
+    &__heading{
+        @include sameTextH2();
+        margin-bottom: 92px;
+    }
+    &__wrapper{
+        @include flexSpace();
+        gap: 124px;
+    }
+    &__slider{
+        @include flexSpace();
+        position: relative;
+    }
+    &__prev{
+        position: absolute;
+        left: -8%;
+        background-color: transparent;
+    }
+    &__next{
+        position: absolute;
+        right: -8%;
+        background-color: transparent;
+    }
+    &__nav{
+        display: flex;
+        gap: 12px;
+        position: absolute;
+        bottom: 12%;
+        left: 43%;
+    }
+    &__bullitt{
+        background-color: transparent;
+    }
+    &__right-block{
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+    &__title{
+        @include textMedium();
+        font-size: 25px;
+        line-height: 140%;
+        letter-spacing: 2%;
+    }
+    &__text{
+        @include textMedium();
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 2%;
+    }
+    &__more{
+        @include textMedium();
+        color: $accentColor;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 2%;
+        &:hover{
+            border-bottom: 1px solid #cededf;
+        }
+    }
+}
+

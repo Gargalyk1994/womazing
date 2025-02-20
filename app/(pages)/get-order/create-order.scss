@@ -1,0 +1,169 @@
+@import '../../../shared/commonStyles/reset.min';
+@import '../../../shared/commonStyles/mixins';
+@import '../../../shared/commonStyles/vars';
+
+.order{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 135px;
+    &__forms-order{
+        @include sameText();
+        font-size: 25px;
+        & input::placeholder{
+            @include sameText();
+            font-size: 17px;
+            color: $colorActiveBread;
+        }
+        & textarea::placeholder{
+            @include sameText();
+            font-size: 17px;
+            color: $colorActiveBread;
+        }
+        &>form>input{
+            max-width: 350px;
+            height: 40px;
+            font-size: 17px;
+            border-bottom: 1px solid #000;
+        }
+    }
+    &__total-order{
+        @include sameText();
+        font-size: 17px;
+    }
+}
+
+.forms-order{
+    &__form-client{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 81px;
+    }
+    &__form-address{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 81px;
+    }
+    &__form-comments{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+
+.total-order{
+    &__create-order{
+        @include accentButton();
+    }
+    &__total{
+        @include flexColumn();
+        gap: 47px;
+        margin-bottom: 160px;
+    }
+    &__payment-method{
+        @include flexColumn();
+        gap: 47px;
+    }
+}
+
+.total{
+    &__heading{
+        font-size: 25px;
+    }
+    &__table-amount{
+        display: grid;
+        gap: 30px;
+    }
+}
+
+.table-amount{
+    
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        gap: 73px;
+    }
+    &__product{
+        display: flex;
+        justify-content: space-between;
+        gap: 73px;
+        
+    }
+    &__product-price{
+        &::before{
+            content: "\0024";
+        }
+    }
+    &__sub-total{
+        display: flex;
+        justify-content: space-between;
+        gap: 73px;
+    }
+    &__total-price{
+        display: flex;
+        justify-content: space-between;
+        gap: 73px;
+    }
+}
+
+.payment-method{
+    &__heading{
+        font-size: 25px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        // &>label {
+        //     // display: flex;
+        //     // align-items: center;
+        //     // user-select: none;
+        // }
+        &>label::before {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid #000;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+        &>input[type=checkbox]:checked + label:before {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("../../public/images/checkbox.png");
+        }
+    }
+    &__mark{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        
+    }
+    
+}
+
+.sub-total{
+    &__price{
+        &::before{
+            content: "\0024";
+        }
+    }
+}
+
+.total-price{
+    &__title{
+        padding: 8px 73px 8px 0;
+        background-color: $colorAccentBack;
+    }
+    &__price{
+        &::before{
+            content: "\0024";
+        }
+    }
+}
