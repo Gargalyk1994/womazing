@@ -9,11 +9,10 @@ export type CartStateItem = {
     price: number;
     productSize?: number | null;
     productColor?: number | null;
-    disabled?: boolean;
 };
 
 interface ReturnProps {
-    items: CartStateItem[];
+    cartItems: CartStateItem[];
     totalAmount: number;
 }
 
@@ -23,7 +22,7 @@ interface ReturnProps {
  * @returns 
  */
 export const getCartDetails = (data: CartDTO): ReturnProps => {
-    const items = data.items.map((item) => ({
+    const cartItems = data.items.map((item) => ({
         id: item.id,
         quantity: item.quantity,
         name: item.productItem.product.name,
@@ -31,11 +30,10 @@ export const getCartDetails = (data: CartDTO): ReturnProps => {
         price: calcCartItemTotalPrice(item),
         productSize: item.productItem.size,
         productColor: item.productItem.color,
-        disabled: false
     })) as CartStateItem[];
 
     return {
-        items,
+        cartItems,
         totalAmount: data.totalAmount,
     };
 };

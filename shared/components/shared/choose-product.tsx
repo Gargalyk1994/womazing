@@ -8,17 +8,18 @@ import {
     sizesProducts,
 } from "@/shared/constants/products";
 import { VariantsColors } from "./variants-colors";
-import { Product, ProductItem } from "@prisma/client";
+import { ProductItem } from "@prisma/client";
 import { useProductOptions } from "@/shared/hooks";
 import { BtnAddToCart } from "./btn-add-to-cart";
 import { useCartStore } from "@/shared/store";
+import { ProductWithRelations } from "@/@types/prisma";
 
 interface Props {
-    product: Product;
+    product: ProductWithRelations;
     items: ProductItem[];
 }
 
-export const ChoiceProduct: React.FC<Props> = ({
+export const ChooseProduct: React.FC<Props> = ({
     product,
     items,
 }) => {
@@ -38,9 +39,8 @@ export const ChoiceProduct: React.FC<Props> = ({
 
     const onSubmit = async (productItemId: number) => {
         try {
-            const itemId = productItemId ?? firstItem.id;
             await addCartItem({
-                productItemId: itemId
+                productItemId
             });
         } catch(err) {
             console.error(err);
@@ -50,8 +50,8 @@ export const ChoiceProduct: React.FC<Props> = ({
     const handleClickAdd = () => {
         if (currentItemId) {
             onSubmit(currentItemId);
+            console.log(currentItemId);
         }
-        console.log(items);
     };
 
     return (

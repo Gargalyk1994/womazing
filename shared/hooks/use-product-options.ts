@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from "react";
 import { getAvailableProducts } from "../lib";
 import { ProductColor, ProductSize  } from "../constants/products";

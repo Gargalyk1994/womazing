@@ -11,8 +11,6 @@ import {
 import { SheetFooter } from "../ui/sheet";
 import { CartSheetItem } from "./cart-sheet-item";
 import { getCartItemDetails } from "@/shared/lib/get-cart-item-details";
-import { useCartStore } from "@/shared/store";
-import { useEffect } from "react";
 import { ProductColor, ProductSize } from "@/shared/constants/products";
 import { useCart } from "@/shared/hooks";
 
