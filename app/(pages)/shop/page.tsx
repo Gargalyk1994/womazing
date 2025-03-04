@@ -26,6 +26,15 @@ export default async function Shop() {
             items: true
         }
     })
+
+    const productsItemsPrice = products
+        .map((product) => product.items
+        .map((item) => item.price))
+        .map((product) => Math.min(...product));
+    const productsItemsOldPrice = products
+        .map((product) => product.items
+        .map((item) => item.oldPrice))
+        .map((product) => product !== null && Math.min(...product));
     
     return ( 
         <>
@@ -39,8 +48,8 @@ export default async function Shop() {
                                     key={product.id}
                                     id={product.id} 
                                     title={product.name}
-                                    price={product.items.price}
-                                    oldPrice={product.items.oldPrice}
+                                    price={productsItemsPrice[i]}
+                                    oldPrice={productsItemsOldPrice[i]}
                                     image={product.image}
                                     alt={product.alt}
                                     categoryId={product.categoryId}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { Footer, HeaderPage } from "../../shared/components/shared";
+import "../../shared/commonStyles/globals.scss";
+
 
 
 const raleway = Raleway({

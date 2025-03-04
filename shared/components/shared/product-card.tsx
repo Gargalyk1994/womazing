@@ -5,7 +5,7 @@ interface Props {
     id: number;
     title: string;
     price?: number;
-    oldPrice?: number;
+    oldPrice?: number | null;
     image: string;
     alt: string;
     categoryId: number
@@ -28,7 +28,7 @@ export const ProductCard: React. FC<Props> = ({
             <h4 className="products__name">{title}</h4>
             <div className="products__price-box">
                 {oldPrice ? <p className="products__price_old">{oldPrice}</p> : null}
-                <p className="products__price">{price}</p>
+                <p className="products__price"><span>от</span> {price}</p>
             </div>
         </div>
     );

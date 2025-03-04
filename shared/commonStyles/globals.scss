@@ -1,7 +1,7 @@
 
-@import '../shared/commonStyles/reset.min';
-@import '../shared/commonStyles/mixins';
-@import '../shared/commonStyles/vars';
+@import './reset.min';
+@import './mixins';
+@import './vars';
 
 
 @tailwind base;
@@ -216,7 +216,7 @@ a{
             opacity: 0;
         }
         &::before{
-            content: url("../public/images/arrow.png");
+            content: url("../../public/images/arrow.png");
             display: flex;
             align-items: center;
             justify-content: center;

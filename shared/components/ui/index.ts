@@ -12,3 +12,9 @@ export { Sheet,
     } from "./sheet"
 export { Form } from "./form";
 export { Input } from "./input";
+export { DotButton, useDotButton } from "./embla-dots";
+export {
+    PrevButton,
+    NextButton,
+    usePrevNextButtons
+} from "./embla-arrow-buttons";

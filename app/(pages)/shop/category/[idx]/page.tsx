@@ -1,5 +1,5 @@
 import { prisma } from '@/prisma/prisma';
-import { Categories, ProductCard, ProductsGroupList } from '@/shared/components/shared';
+import { Categories, ProductCard } from '@/shared/components/shared';
 import '../../shop.scss';
 import { notFound } from 'next/navigation';
 
@@ -37,6 +37,16 @@ export default async function CategoryPage({ params: { idx } } : { params: { idx
             items: true
         }
     })
+
+    const productsItemsPrice = products
+        .map((product) => product.items
+        .map((item) => item.price))
+        .map((product) => Math.min(...product));
+    const productsItemsOldPrice = products
+        .map((product) => product.items
+        .map((item) => item.oldPrice))
+        .map((product) => Math.min(...product));
+
     
     return ( 
         <>
@@ -44,15 +54,15 @@ export default async function CategoryPage({ params: { idx } } : { params: { idx
             <Categories categories={categories.filter((category) => category.products.length > 0)} />
                 <p className="counter-products">Показано: 9 из 12 товаров</p>
                 <div className="products">
-                    {products.map((product, i) => ( 
+                    {products.slice(0, 2).map((product, i) => ( 
                         (   
                             category.id === product.categoryId &&
                             <ProductCard
                                 key={product.id}
                                 id={product.id} 
                                 title={product.name}
-                                price={product.items[i].price}
-                                oldPrice={product.items[i].oldPrice}
+                                price={productsItemsPrice[i]}
+                                oldPrice={productsItemsOldPrice[i]}
                                 image={product.image}
                                 alt={product.alt}
                                 categoryId={product.categoryId}
