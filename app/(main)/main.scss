@@ -1,119 +1,119 @@
-@import '../../shared/commonStyles/reset.min';
-@import '../../shared/commonStyles/mixins';
-@import '../../shared/commonStyles/vars';
+@import "../../shared/commonStyles/reset.min";
+@import "../../shared/commonStyles/mixins";
+@import "../../shared/commonStyles/vars";
 
-.main-block{
-    &__content{
+.main-block {
+    &__content {
         background: linear-gradient(to right, #fff 55%, $colorAccentBack 45%);
         margin-bottom: 130px;
     }
-    &__sliders{
+    &__sliders {
         display: flex;
         align-items: center;
         padding-top: 41px;
     }
 }
 
-.text-slider{
+.text-slider {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &__heading{
+    &__heading {
         @include sameTextH1();
         margin-bottom: 45px;
     }
-    &__text{
+    &__text {
         @include textRegular();
         font-size: 20px;
         line-height: 140%;
         letter-spacing: 2%;
         margin-bottom: 52px;
     }
-    &__btns-box{
+    &__btns-box {
         display: flex;
         margin-bottom: 126px;
     }
-    &__btn-arrow{
+    &__btn-arrow {
         padding: 20px 26px;
         background-color: #6e9c9f1a;
         cursor: pointer;
-        &:hover{
+        &:hover {
             background-color: #509498;
         }
-        &:hover path{
+        &:hover path {
             stroke: #fff;
         }
     }
-    &__button{
+    &__button {
         @include accentButton();
     }
-    &__nav{
+    &__nav {
         margin: 0 auto;
     }
-    &__bullitt{
+    &__bullitt {
         background-color: transparent;
     }
 }
-.slider-image{
+.slider-image {
     position: relative;
-    &__static-photo1{
+    &__static-photo1 {
         position: absolute;
         top: 18%;
         left: 75%;
     }
-    &__static-photo2{
+    &__static-photo2 {
         position: absolute;
         bottom: 0;
         left: -30%;
     }
 }
 
-.new-collection{
+.new-collection {
     margin-bottom: 130px;
-    &__heading{
+    &__heading {
         @include sameTextH2();
         margin-bottom: 92px;
     }
-    &__btn-box{
+    &__btn-box {
         text-align: center;
     }
-    &__btn{
+    &__btn {
         @include accentButton();
-        color: $accentColor;;
+        color: $accentColor;
         background-color: #fff;
         border: 1px solid $accentColor;
-        &:hover{
+        &:hover {
             color: #fff;
             background-color: $accentColor;
-        } 
+        }
     }
 }
 
-.important-for-us{
+.important-for-us {
     margin-bottom: 130px;
-    &__heading{
+    &__heading {
         @include sameTextH2();
         margin-bottom: 92px;
     }
-    &__wrapper{
+    &__wrapper {
         display: flex;
         justify-content: space-between;
         gap: 30px;
     }
-    &__item{
+    &__item {
         flex-basis: 305px;
     }
-    svg{
+    svg {
         margin-bottom: 37px;
     }
-    &__title{
+    &__title {
         @include textMedium();
         font-size: 25px;
         line-height: 140%;
         letter-spacing: 2%;
         margin-bottom: 24px;
     }
-    &__description{
+    &__description {
         @include textMedium();
         font-size: 17px;
         line-height: 140%;
@@ -121,67 +121,92 @@
     }
 }
 
-.dream-of-team{
+.dream-of-team {
     margin-bottom: 130px;
-    &__heading{
+    &__heading {
         @include sameTextH2();
         margin-bottom: 92px;
     }
-    &__wrapper{
+    &__wrapper {
         @include flexSpace();
         gap: 124px;
     }
-    &__slider{
-        @include flexSpace();
+    &__slider {
+        width: 729px;
+        min-height: 487px;
         position: relative;
     }
-    &__prev{
+    &__image{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         position: absolute;
+        transition: ease-in-out 0.4s;
+        object-fit: cover;
+    }
+    &__prev {
+        position: absolute;
+        top: 50%;
         left: -8%;
         background-color: transparent;
     }
-    &__next{
+    &__next {
         position: absolute;
+        top: 50%;
         right: -8%;
         background-color: transparent;
     }
-    &__nav{
+    &__nav {
         display: flex;
         gap: 12px;
         position: absolute;
         bottom: 12%;
         left: 43%;
     }
-    &__bullitt{
+    &__bullitt {
         background-color: transparent;
     }
-    &__right-block{
+    &__right-block {
+        max-width: 255px;
         display: flex;
         flex-direction: column;
         gap: 28px;
     }
-    &__title{
+    &__title {
         @include textMedium();
         font-size: 25px;
         line-height: 140%;
         letter-spacing: 2%;
     }
-    &__text{
+    &__text {
         @include textMedium();
         font-size: 17px;
         line-height: 140%;
         letter-spacing: 2%;
     }
-    &__more{
+    &__more {
         @include textMedium();
         color: $accentColor;
         font-size: 17px;
         font-weight: 500;
         line-height: 140%;
         letter-spacing: 2%;
-        &:hover{
+        &:hover {
             border-bottom: 1px solid #cededf;
         }
     }
 }
+
+
+.active-anim{
+    opacity: 1;
+}
+
+.dot-active > svg > rect{
+    fill: #fff;
+}
+
+
+
+
 

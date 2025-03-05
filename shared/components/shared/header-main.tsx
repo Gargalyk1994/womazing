@@ -1,6 +1,7 @@
 
 import React from 'react'; 
 import { Header } from './header';
+import Link from 'next/link';
 
 interface Props {
 className?: string;
@@ -21,7 +22,7 @@ export const HeaderMain: React. FC<Props> = ({ className }) => {
                             то, что вы искали в этом сезоне. Время
                             исследовать.
                         </h3>
-                        <div className="text-slider__btns-box">
+                        <Link href={"./shop"} className="text-slider__btns-box">
                             <button className="text-slider__btn-arrow">
                                 <svg
                                     width="14.716469"
@@ -43,7 +44,7 @@ export const HeaderMain: React. FC<Props> = ({ className }) => {
                             <button className="text-slider__button">
                                 Открыть магазин
                             </button>
-                        </div>
+                        </Link>
                         <div className="text-slider__nav">
                             <button className="text-slider__bullitt">
                                 <svg

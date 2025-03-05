@@ -1,10 +1,8 @@
 import { CarouselMain, ImportantForUs, NewCollection } from "@/shared/components/shared";
 import { products, productsItemsOldPrice, productsItemsPrice } from "@/shared/constants/prices";
-import { EmblaOptionsType } from 'embla-carousel';
 import "./main.scss";
 
 export default async function Main() {
-    const OPTIONS: EmblaOptionsType = {}
     return (
         <>
             <NewCollection 
@@ -13,7 +11,7 @@ export default async function Main() {
                 productsOldPrice={productsItemsOldPrice}
             />
             <ImportantForUs />
-            <CarouselMain options={OPTIONS}/>        
+            <CarouselMain/>        
         </>
     );
 }
