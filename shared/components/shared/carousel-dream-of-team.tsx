@@ -10,7 +10,7 @@ interface Props {
     className?: string;
 }
 
-export const CarouselMain: React. FC<Props> = ({ className }) => {
+export const CarouselDreamOfTeam: React. FC<Props> = ({ className }) => {
     const [slideIndex, setSlideIndex] = useState(1);
 
     const slides = [1, 2, 3];
@@ -59,7 +59,7 @@ export const CarouselMain: React. FC<Props> = ({ className }) => {
                             <DotButton
                             key={index}
                             onClick={() => moveDot(index + 1)}
-                            className={slideIndex === index + 1 ? "dream-of-team__bullitt dot-active" : "dream-of-team__bullitt"}
+                            className={slideIndex === index + 1 ? "dream-of-team__bullitt dot-active-for-dream" : "dream-of-team__bullitt"}
                             />
                         ))}
                     </div>

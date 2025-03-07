@@ -8,22 +8,29 @@
         margin-bottom: 130px;
     }
     &__sliders {
-        display: flex;
-        align-items: center;
+        @include flexSpace();
         padding-top: 41px;
     }
 }
 
 .text-slider {
+    max-width: 570PX;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &__item{
+        display: none;
+        transition: ease-in-out 0.4s;
+        object-fit: cover;
+    }
     &__heading {
         @include sameTextH1();
         margin-bottom: 45px;
     }
     &__text {
         @include textRegular();
+        max-width: 385px;
+        text-align: right;
         font-size: 20px;
         line-height: 140%;
         letter-spacing: 2%;
@@ -49,6 +56,8 @@
     }
     &__nav {
         margin: 0 auto;
+        display: flex;
+        gap: 12px;
     }
     &__bullitt {
         background-color: transparent;
@@ -201,9 +210,15 @@
 .active-anim{
     opacity: 1;
 }
+.active-text{
+    display: block;;
+}
 
-.dot-active > svg > rect{
+.dot-active-for-dream > svg > rect{
     fill: #fff;
+}
+.dot-active-for-text-slider > svg > rect{
+    fill: #000;
 }
 
 

@@ -1,4 +1,4 @@
-import { CarouselMain, ImportantForUs, NewCollection } from "@/shared/components/shared";
+import { CarouselDreamOfTeam, ImportantForUs, NewCollection } from "@/shared/components/shared";
 import { products, productsItemsOldPrice, productsItemsPrice } from "@/shared/constants/prices";
 import "./main.scss";
 
@@ -11,7 +11,7 @@ export default async function Main() {
                 productsOldPrice={productsItemsOldPrice}
             />
             <ImportantForUs />
-            <CarouselMain/>        
+            <CarouselDreamOfTeam/>        
         </>
     );
 }

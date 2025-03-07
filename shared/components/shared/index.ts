@@ -4,7 +4,7 @@ export { HeaderPage } from "./header-page";
 export { PhoneNumber } from "./phone-number";
 export { NewCollection } from "./new-collection";
 export { ImportantForUs } from "./important-for-us";
-export { CarouselMain } from "./carousel-main";
+export { CarouselDreamOfTeam} from "./carousel-dream-of-team";
 export { ProductCard } from "./product-card";
 export { Categories } from "./categories";
 export { ProductsGroupList } from "./products-group-list";
