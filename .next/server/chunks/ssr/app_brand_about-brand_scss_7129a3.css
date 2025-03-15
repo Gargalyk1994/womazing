@@ -1,0 +1,275 @@
+/* [project]/app/brand/about-brand.scss.css [app-client] (css) */
+*, :after, :before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  line-height: 1.15;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+a {
+  background-color: #0000;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+button, input, optgroup, select, textarea {
+  line-height: inherit;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+[type="button"], [type="reset"], [type="submit"], button {
+  -webkit-appearance: button;
+  padding: 0;
+}
+
+input {
+  overflow: visible;
+}
+
+input, textarea {
+  padding: 1px;
+}
+
+fieldset {
+  border: 1px solid;
+  margin: 0 2px;
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="color"] {
+  background: inherit;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+::-webkit-file-upload-button, ::-webkit-search-decoration {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted buttontext;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  color: inherit;
+  overflow: visible;
+}
+
+dl, ol, ul {
+  margin: 0;
+}
+
+dl dl, dl ol, dl ul, ol dl, ol ol, ol ul, ul dl, ul ol, ul ul {
+  margin: 0;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+details {
+  display: block;
+}
+
+dialog {
+  background-color: inherit;
+  border: solid;
+  color: inherit;
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.brand-content__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 130px;
+  margin-bottom: 130px;
+}
+
+.brand-content__block {
+  display: flex;
+  gap: 94px;
+  align-items: center;
+}
+
+.brand-content__description {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.brand-content__heading {
+  color: #000;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: .02em;
+}
+
+.brand-content__text {
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: .02em;
+}
+
+.brand-content__to-store {
+  color: #000;
+  font-weight: 400;
+  color: #fff;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 2%;
+  text-align: center;
+  padding: 22px 50px;
+  background-color: #6e9c9f;
+  cursor: pointer;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.brand-content__to-store:hover {
+  background-color: #509498;
+  transition: all .3s ease-out;
+}
+
+
+/*# sourceMappingURL=app_brand_about-brand_scss_7129a3.css.map*/

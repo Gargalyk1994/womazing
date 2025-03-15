@@ -1,0 +1,23 @@
+{
+  "pages": {
+    "/(pages)/shop/category/product/[id]/page": [
+      "static/chunks/[root of the server]__98dbd0._.css",
+      "static/chunks/_65ab26._.js",
+      "static/chunks/app_layout_tsx_61af54._.js",
+      "static/chunks/node_modules_25ecf4._.js",
+      "static/chunks/_4a232c._.js",
+      "static/chunks/app_(pages)_layout_tsx_0073e2._.js",
+      "static/chunks/app_(pages)_shop_category_product_[id]_product_scss_d9a6e3.css",
+      "static/chunks/app_(pages)_shop_category_product_[id]_page_tsx_b3c8a3._.js",
+      "static/chunks/app_(pages)_shop_category_product_[id]_page_tsx_0b68c3._.js",
+      "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",
+      "static/chunks/node_modules_next_dist_compiled_107ce8._.js",
+      "static/chunks/node_modules_next_dist_client_523921._.js",
+      "static/chunks/node_modules_next_dist_4bb10e._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_00636a._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_d0a96d._.js",
+      "static/chunks/_e69f0d._.js",
+      "static/chunks/_d95469._.js"
+    ]
+  }
+}

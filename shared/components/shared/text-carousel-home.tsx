@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useState } from 'react'; 
+import React, { useState } from 'react'; 
 import Link from 'next/link';
 import Autoplay from "embla-carousel-autoplay"
 import { Carousel, DotButton } from '../ui';

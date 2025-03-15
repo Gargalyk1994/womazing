@@ -1,0 +1,291 @@
+/* [project]/app/globals.css [app-client] (css) */
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
+  border-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+__links.navigation {
+  display: flex;
+  gap: 45px;
+}
+
+__links.navigation a {
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 2%;
+}
+
+@include textRegular();
+
+__links.navigation a:hover {
+  color: $ accentColor;
+}
+
+.header {
+  padding-top: 51px;
+}
+
+@include flexSpace();
+
+@include Logotype();
+
+__contacts.header {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+__image-phone.header {
+  display: flex;
+  gap: 10px;
+}
+
+__image-phone.header svg:hover {
+  background-color: $ accentColor;
+  width: 27px;
+  height: 27px;
+}
+
+__image-phone.header svg:hover path {
+  fill: #fff;
+}
+
+__number-phone.header {
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 2%;
+}
+
+@include textRegular();
+
+.heading {
+  padding: 190px 0 214px;
+}
+
+__title.heading {
+  margin-bottom: 30px;
+}
+
+@include sameTextH1();
+
+__breadcrumbs.heading {
+  display: flex;
+  gap: 5px;
+}
+
+__breadcrumbs-item.heading {
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: .02em;
+}
+
+@include textMedium();
+
+__breadcrumbs-item.heading:not(:last-of-type):after {
+  content: "—";
+  width: 160px;
+  padding-left: 5px;
+}
+
+__breadcrumbs-item.heading:last-of-type {
+  color: $ colorActiveBread;
+}
+
+__breadcrumbs-item.heading:hover {
+  color: $ accentColor;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 65px;
+}
+
+__card.products {
+  flex-direction: column;
+}
+
+@include flexCenter();
+
+__image-box.products {
+  position: relative;
+  transition: all .3s ease-out;
+}
+
+__image-box.products:hover {
+  transform: scale(1.01);
+}
+
+__image-box.products:hover:before {
+  opacity: .5;
+}
+
+__image-box.products:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $ accentColor;
+  transition: all .5s;
+  opacity: 0;
+}
+
+__image-box.products:before {
+  content: url("../assets/images/arrow.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+__image.products {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+__name.products {
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 2%;
+  margin-bottom: 10px;
+}
+
+@include textMedium();
+
+__price-box.products {
+  display: flex;
+  gap: 10px;
+}
+
+__price.products {
+  color: $ colorPrice;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 2%;
+}
+
+@include textMedium();
+
+__price.products:before {
+  content: "$";
+}
+
+_old__price.products {
+  color: $ colorPriceOld;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 2%;
+  text-decoration-line: line-through;
+}
+
+@include textMedium();
+
+_old__price.products:before {
+  content: "$";
+}
+
+.footer {
+  min-height: 363px;
+  background-color: $ colorAccentBack;
+}
+
+@include Logotype();
+
+__wrapper.footer {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+__left-block.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+__copyright.footer {
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: .02em;
+}
+
+@include textRegular();
+
+__navigation-menu.footer {
+  margin-bottom: 45px;
+}
+
+__nav-categories.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 107px;
+}
+
+__nav-category.footer {
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: .02em;
+}
+
+@include textRegular();
+
+__right-block.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+}
+
+__contacts.footer {
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: .02em;
+  text-align: right;
+}
+
+@include textRegular();
+
+__social-icons.footer {
+  display: flex;
+  gap: 12px;
+}
+
+/*# sourceMappingURL=app_globals_b52d8e.css.map*/

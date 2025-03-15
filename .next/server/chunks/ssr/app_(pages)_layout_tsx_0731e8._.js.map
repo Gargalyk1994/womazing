@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://B%3A/GB%20my%20work/Next.js/womazing/app/%28pages%29/layout.tsx"],"sourcesContent":["import type { Metadata } from \"next\";\r\nimport { Raleway } from \"next/font/google\";\r\nimport { Footer, HeaderPage } from \"../../shared/components/shared\";\r\n\r\n\r\nconst raleway = Raleway({\r\n    subsets: [\"latin\"],\r\n    weight: [\"400\", \"500\", \"700\"],\r\n});\r\n\r\nexport const metadata: Metadata = {\r\n    title: \"Womazing\",\r\n    description: \"Интернет-магазин Womazing\",\r\n};\r\n\r\nexport default function PagesLayout({\r\n    children,\r\n}: Readonly<{\r\n    children: React.ReactNode;\r\n}>) {\r\n    \r\n    return (\r\n        <html lang=\"en\">\r\n            <body className={`${raleway.className}`}>\r\n                <HeaderPage />\r\n                {children}\r\n                <Footer />\r\n            </body>\r\n        </html>\r\n    );\r\n}\r\n"],"names":[],"mappings":";;;;;;;;;;;;;;AAUO,MAAM,WAAqB;IAC9B,OAAO;IACP,aAAa;AACjB;AAEe,SAAS,YAAY,EAChC,QAAQ,EAGV;IAEE,qBACI,8OAAC;QAAK,MAAK;kBACP,cAAA,8OAAC;YAAK,WAAW,GAAG,2IAAA,CAAA,UAAO,CAAC,SAAS,EAAE;;8BACnC,8OAAC;;;;;gBACA;8BACD,8OAAC;;;;;;;;;;;;;;;;AAIjB"}},
+    {"offset": {"line": 54, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

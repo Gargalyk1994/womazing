@@ -1,0 +1,401 @@
+/* [project]/app/get-order/create-order.scss.css [app-client] (css) */
+*, :after, :before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  line-height: 1.15;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+a {
+  background-color: #0000;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+button, input, optgroup, select, textarea {
+  line-height: inherit;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+[type="button"], [type="reset"], [type="submit"], button {
+  -webkit-appearance: button;
+  padding: 0;
+}
+
+input {
+  overflow: visible;
+}
+
+input, textarea {
+  padding: 1px;
+}
+
+fieldset {
+  border: 1px solid;
+  margin: 0 2px;
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="color"] {
+  background: inherit;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+::-webkit-file-upload-button, ::-webkit-search-decoration {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted buttontext;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  color: inherit;
+  overflow: visible;
+}
+
+dl, ol, ul {
+  margin: 0;
+}
+
+dl dl, dl ol, dl ul, ol dl, ol ol, ol ul, ul dl, ul ol, ul ul {
+  margin: 0;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+details {
+  display: block;
+}
+
+dialog {
+  background-color: inherit;
+  border: solid;
+  color: inherit;
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 135px;
+}
+
+.order__forms-order {
+  color: #000;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: .02em;
+  font-size: 25px;
+}
+
+.order__forms-order input::placeholder {
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: .02em;
+  font-size: 17px;
+  color: #909090;
+}
+
+.order__forms-order textarea::placeholder {
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: .02em;
+  font-size: 17px;
+  color: #909090;
+}
+
+.order__forms-order > form > input {
+  max-width: 350px;
+  height: 40px;
+  font-size: 17px;
+  border-bottom: 1px solid #000;
+}
+
+.order__total-order {
+  color: #000;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: .02em;
+  font-size: 17px;
+}
+
+.forms-order__form-client {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-bottom: 81px;
+}
+
+.forms-order__form-address {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-bottom: 81px;
+}
+
+.forms-order__form-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.total-order__create-order {
+  color: #000;
+  font-weight: 400;
+  color: #fff;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 2%;
+  text-align: center;
+  padding: 22px 50px;
+  background-color: #6e9c9f;
+  cursor: pointer;
+}
+
+.total-order__create-order:hover {
+  background-color: #509498;
+  transition: all .3s ease-out;
+}
+
+.total-order__total {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+  margin-bottom: 160px;
+}
+
+.total-order__payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+}
+
+.total__heading {
+  font-size: 25px;
+}
+
+.total__table-amount {
+  display: grid;
+  gap: 30px;
+}
+
+.table-amount__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 73px;
+}
+
+.table-amount__product {
+  display: flex;
+  justify-content: space-between;
+  gap: 73px;
+}
+
+.table-amount__product-price:before {
+  content: "$";
+}
+
+.table-amount__sub-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 73px;
+}
+
+.table-amount__total-price {
+  display: flex;
+  justify-content: space-between;
+  gap: 73px;
+}
+
+.payment-method__heading {
+  font-size: 25px;
+}
+
+.payment-method__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.payment-method__item > label:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #000;
+  margin-right: .5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
+}
+
+.payment-method__item > input[type="checkbox"]:checked + label:before {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../media/checkbox.14c159cb.png");
+}
+
+.payment-method__mark {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.sub-total__price:before {
+  content: "$";
+}
+
+.total-price__title {
+  padding: 8px 73px 8px 0;
+  background-color: #f1eadc;
+}
+
+.total-price__price:before {
+  content: "$";
+}
+
+
+/*# sourceMappingURL=app_get-order_create-order_scss_ef6a09.css.map*/

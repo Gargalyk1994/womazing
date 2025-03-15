@@ -16,4 +16,5 @@ export { CartSheet } from "./cart-sheet";
 export { CartItems } from "./cart-items";
 export { CartButton } from "./cart-button";
 export { CountButton } from "./count-button";
+export { PaginationShop } from "./pagination-shop";
 export { Footer } from "./footer";

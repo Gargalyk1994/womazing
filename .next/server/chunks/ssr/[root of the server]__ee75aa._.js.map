@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":["turbopack:///[next]/internal/font/google/raleway_f16df1d3.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"className\": \"raleway_f16df1d3-module__kwyHJq__className\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA","ignoreList":[0]}},
+    {"offset": {"line": 9, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["turbopack:///[next]/internal/font/google/raleway_f16df1d3.js"],"sourcesContent":["import cssModule from \"@vercel/turbopack-next/internal/font/google/cssmodule.module.css?{%22path%22:%22layout.tsx%22,%22import%22:%22Raleway%22,%22arguments%22:[{%22subsets%22:[%22latin%22],%22weight%22:[%22400%22,%22500%22,%22700%22]}],%22variableName%22:%22raleway%22}\";\nconst fontData = {\n    className: cssModule.className,\n    style: {\n        fontFamily: \"'Raleway', 'Raleway Fallback'\",\n        fontStyle: \"normal\",\n\n    },\n};\n\nif (cssModule.variable != null) {\n    fontData.variable = cssModule.variable;\n}\n\nexport default fontData;\n"],"names":[],"mappings":";;;AAAA;;AACA,MAAM,WAAW;IACb,WAAW,uJAAA,CAAA,UAAS,CAAC,SAAS;IAC9B,OAAO;QACH,YAAY;QACZ,WAAW;IAEf;AACJ;AAEA,IAAI,uJAAA,CAAA,UAAS,CAAC,QAAQ,IAAI,MAAM;IAC5B,SAAS,QAAQ,GAAG,uJAAA,CAAA,UAAS,CAAC,QAAQ;AAC1C;uCAEe","ignoreList":[0],"debugId":null}},
+    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file://B%3A/GB%20my%20work/Next.js/womazing/app/layout.tsx"],"sourcesContent":["import { Raleway } from \"next/font/google\";\nimport \"./globals.scss\";\n\nconst raleway = Raleway({\n  subsets: [\"latin\"],\n  weight: [\"400\", \"500\", \"700\"]\n});\n\n\nexport default function Root1Layout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    {children}\n  );\n}\n"],"names":[],"mappings":";;;;;;AASe,SAAS,YAAY,EAClC,QAAQ,EAGR;IACA,OACE;QAAC;IAAQ;AAEb","debugId":null}},
+    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
