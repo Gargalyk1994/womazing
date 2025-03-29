@@ -3360,7 +3360,7 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-const Categories = ({ categories, className })=>{
+const Categories = ({ categories, className, activeCategoryId })=>{
     _s();
     const [activeCategory, setActiveCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const handleCategoryClick = (categoryId)=>{
@@ -3369,18 +3369,18 @@ const Categories = ({ categories, className })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("btns-categories", className),
         children: categories.map(({ name, id }, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                onFocus: ()=>handleCategoryClick(id),
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("btns-categories__item", activeCategory === id && "btns-categories__item_active"),
+                onClick: ()=>handleCategoryClick(id),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("btns-categories__item", activeCategoryId === id && "btns-categories__item_active"),
                 href: `/shop/category/${id}`,
                 children: name
             }, index, false, {
                 fileName: "[project]/shared/components/shared/categories.tsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 17
             }, this))
     }, void 0, false, {
         fileName: "[project]/shared/components/shared/categories.tsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 9
     }, this);
 };
@@ -3438,8 +3438,11 @@ const ProductCard = ({ id, title, price, oldPrice, image, alt, categoryId })=>{
                 children: [
                     oldPrice ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "products__price_old",
-                        children: oldPrice
-                    }, void 0, false, {
+                        children: [
+                            "от $",
+                            oldPrice
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/shared/components/shared/product-card.tsx",
                         lineNumber: 30,
                         columnNumber: 29
@@ -3447,14 +3450,7 @@ const ProductCard = ({ id, title, price, oldPrice, image, alt, categoryId })=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "products__price",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: "от"
-                            }, void 0, false, {
-                                fileName: "[project]/shared/components/shared/product-card.tsx",
-                                lineNumber: 31,
-                                columnNumber: 48
-                            }, this),
-                            " ",
+                            "от $",
                             price
                         ]
                     }, void 0, true, {
@@ -3719,6 +3715,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$pr
 var __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$btn$2d$add$2d$to$2d$cart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/shared/components/shared/btn-add-to-cart.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$store$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/shared/store/index.ts [app-client] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$store$2f$cart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/shared/store/cart.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -3728,15 +3725,16 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 const ChooseProduct = ({ product, items })=>{
     _s();
+    const [isSheetOpen, setIsSheetOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const { size, color, currentItemId, setSize, setColor, availableProducts } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$product$2d$options$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProductOptions"])(items);
     const addCartItem = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$store$2f$cart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"])({
         "ChooseProduct.useCartStore[addCartItem]": (state)=>state.addCartItem
     }["ChooseProduct.useCartStore[addCartItem]"]);
     const productPrice = items.find((item)=>item.size === size && item.color === color)?.price;
     const productOldPrice = items.find((item)=>item.size === size && item.color === color)?.oldPrice;
-    const firstItem = items[0];
     const onSubmit = async (productItemId)=>{
         try {
             await addCartItem({
@@ -3749,7 +3747,7 @@ const ChooseProduct = ({ product, items })=>{
     const handleClickAdd = ()=>{
         if (currentItemId) {
             onSubmit(currentItemId);
-            console.log(currentItemId);
+            setIsSheetOpen(true);
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3763,12 +3761,12 @@ const ChooseProduct = ({ product, items })=>{
                     className: "block-image__image"
                 }, void 0, false, {
                     fileName: "[project]/shared/components/shared/choose-product.tsx",
-                    lineNumber: 60,
+                    lineNumber: 62,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                lineNumber: 59,
+                lineNumber: 61,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3782,7 +3780,7 @@ const ChooseProduct = ({ product, items })=>{
                                 children: productPrice
                             }, void 0, false, {
                                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                                lineNumber: 69,
+                                lineNumber: 71,
                                 columnNumber: 25
                             }, this) : null,
                             productOldPrice ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3790,13 +3788,13 @@ const ChooseProduct = ({ product, items })=>{
                                 children: productOldPrice
                             }, void 0, false, {
                                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                                lineNumber: 72,
+                                lineNumber: 74,
                                 columnNumber: 25
                             }, this) : null
                         ]
                     }, void 0, true, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 67,
+                        lineNumber: 69,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$variants$2d$sizes$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VariantsSizes"], {
@@ -3807,7 +3805,7 @@ const ChooseProduct = ({ product, items })=>{
                         size: size
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 77,
+                        lineNumber: 79,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$variants$2d$colors$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VariantsColors"], {
@@ -3816,30 +3814,30 @@ const ChooseProduct = ({ product, items })=>{
                         selectedValue: String(color)
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 84,
+                        lineNumber: 86,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$btn$2d$add$2d$to$2d$cart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BtnAddToCart"], {
                         onClickAddCart: handleClickAdd
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 89,
+                        lineNumber: 91,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                lineNumber: 66,
+                lineNumber: 68,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/shared/components/shared/choose-product.tsx",
-        lineNumber: 58,
+        lineNumber: 60,
         columnNumber: 9
     }, this);
 };
-_s(ChooseProduct, "L1pGnGanpp1K5aazEFUwA3JDFwM=", false, function() {
+_s(ChooseProduct, "ZwUKjZ9lBKEjynn8nAX0a86ZNPk=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$product$2d$options$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProductOptions"],
         __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$store$2f$cart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"]

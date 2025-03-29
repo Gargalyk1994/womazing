@@ -38,6 +38,8 @@ export default async function CategoryPage({ params: { idx } } : { params: { idx
         }
     })
 
+    const filteredProducts = products.filter((product) => product.categoryId === Number(idx));
+
     const productsItemsPrice = products
         .map((product) => product.items
         .map((item) => item.price))
@@ -51,12 +53,14 @@ export default async function CategoryPage({ params: { idx } } : { params: { idx
     return ( 
         <>
             <section className="catalog center">
-            <Categories categories={categories.filter((category) => category.products.length > 0)} />
+                <Categories 
+                    categories={categories.filter((category) => category.products.length > 0)}
+                    activeCategoryId={Number(idx)}
+                />
                 <p className="counter-products">Показано: 9 из {products.length} товаров</p>
                 <div className="products">
-                    {products.slice(0, 2).map((product, i) => ( 
-                        (   
-                            category.id === product.categoryId &&
+                    {Number(idx) === 1 ? 
+                        products.map((product, i) => ( 
                             <ProductCard
                                 key={product.id}
                                 id={product.id} 
@@ -67,7 +71,18 @@ export default async function CategoryPage({ params: { idx } } : { params: { idx
                                 alt={product.alt}
                                 categoryId={product.categoryId}
                             />
-                            )
+                        )) :
+                        filteredProducts.map((product, i) => ( 
+                            <ProductCard
+                                key={product.id}
+                                id={product.id} 
+                                title={product.name}
+                                price={productsItemsPrice[i]}
+                                oldPrice={productsItemsOldPrice[i]}
+                                image={product.image}
+                                alt={product.alt}
+                                categoryId={product.categoryId}
+                            />
                         )
                     )}
                 </div>

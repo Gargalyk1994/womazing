@@ -6,10 +6,11 @@ import React, { useState } from "react";
 
 interface Props {
     categories: Category[];
+    activeCategoryId?: number;
     className?: string;
 }
 
-export const Categories: React.FC<Props> = ({ categories, className }) => {
+export const Categories: React.FC<Props> = ({ categories, className, activeCategoryId }) => {
     const [activeCategory, setActiveCategory] = useState(1);
     const handleCategoryClick = (categoryId: number) => {
         setActiveCategory(categoryId);
@@ -24,10 +25,10 @@ export const Categories: React.FC<Props> = ({ categories, className }) => {
         >
             {categories.map(({ name, id }, index) => (
                 <a
-                    onFocus={() => handleCategoryClick(id)}
+                    onClick={() => handleCategoryClick(id)}
                     className={cn(
                         "btns-categories__item",
-                        activeCategory === id &&
+                        activeCategoryId === id &&
                         "btns-categories__item_active"
                     )}
                     href={`/shop/category/${id}`}

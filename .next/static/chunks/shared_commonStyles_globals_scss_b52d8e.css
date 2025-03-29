@@ -1447,10 +1447,6 @@ a {
   letter-spacing: 2%;
 }
 
-.products__price:before {
-  content: "$";
-}
-
 .products__price_old {
   color: #000;
   font-weight: 500;
@@ -1459,10 +1455,6 @@ a {
   line-height: 140%;
   letter-spacing: 2%;
   text-decoration-line: line-through;
-}
-
-.products__price_old:before {
-  content: "$";
 }
 
 .footer {

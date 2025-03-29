@@ -245,9 +245,6 @@ a{
         font-size: 15px;
         line-height: 140%;
         letter-spacing: 2%;
-        &::before{
-            content: "\0024";
-        }
         &_old{
             @include textMedium();
             color: $colorPriceOld;
@@ -255,9 +252,6 @@ a{
             line-height: 140%;
             letter-spacing: 2%;
             text-decoration-line: line-through;
-            &::before{
-                content: "\0024";
-            }
         }
     }
 }

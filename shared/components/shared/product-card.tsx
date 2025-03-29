@@ -27,8 +27,8 @@ export const ProductCard: React. FC<Props> = ({
             </Link>
             <h4 className="products__name">{title}</h4>
             <div className="products__price-box">
-                {oldPrice ? <p className="products__price_old">{oldPrice}</p> : null}
-                <p className="products__price"><span>от</span> {price}</p>
+                {oldPrice ? <p className="products__price_old">от ${oldPrice}</p> : null}
+                <p className="products__price">от ${price}</p>
             </div>
         </div>
     );

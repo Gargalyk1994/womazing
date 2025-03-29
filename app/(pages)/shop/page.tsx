@@ -39,7 +39,9 @@ export default async function Shop() {
     return ( 
         <>
             <section className="catalog center">
-                <Categories categories={categories.filter((category) => category.products.length > 0)} />
+                <Categories 
+                    categories={categories.filter((category) => category.products.length > 0)}
+                />
                 <p className="counter-products">Показано: 9 из {products.length} товаров</p>
                     <div className="products">
                         {products.map((product, i) => ( 

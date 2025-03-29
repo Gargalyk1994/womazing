@@ -9,10 +9,11 @@ import {
 } from "@/shared/constants/products";
 import { VariantsColors } from "./variants-colors";
 import { ProductItem } from "@prisma/client";
-import { useProductOptions } from "@/shared/hooks";
+import { useProductOptions, useSheetOpen } from "@/shared/hooks";
 import { BtnAddToCart } from "./btn-add-to-cart";
 import { useCartStore } from "@/shared/store";
 import { ProductWithRelations } from "@/@types/prisma";
+import { useState } from "react";
 
 interface Props {
     product: ProductWithRelations;
@@ -23,6 +24,7 @@ export const ChooseProduct: React.FC<Props> = ({
     product,
     items,
 }) => {
+    const { setIsSheetOpen } = useSheetOpen();
     const { size, color, currentItemId, setSize, setColor, availableProducts } =
         useProductOptions(items);
 
@@ -35,7 +37,6 @@ export const ChooseProduct: React.FC<Props> = ({
         (item) => item.size === size && item.color === color
     )?.oldPrice;
     
-    const firstItem = items[0];
 
     const onSubmit = async (productItemId: number) => {
         try {
@@ -50,7 +51,7 @@ export const ChooseProduct: React.FC<Props> = ({
     const handleClickAdd = () => {
         if (currentItemId) {
             onSubmit(currentItemId);
-            console.log(currentItemId);
+            setIsSheetOpen(true);
         }
     };
 

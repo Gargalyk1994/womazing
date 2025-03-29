@@ -71,6 +71,7 @@ async function CategoryPage({ params: { idx } }) {
             items: true
         }
     });
+    const filteredProducts = products.filter((product)=>product.categoryId === Number(idx));
     const productsItemsPrice = products.map((product)=>product.items.map((item)=>item.price)).map((product)=>Math.min(...product));
     const productsItemsOldPrice = products.map((product)=>product.items.map((item)=>item.oldPrice)).map((product)=>Math.min(...product));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -78,23 +79,28 @@ async function CategoryPage({ params: { idx } }) {
             className: "catalog center",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$categories$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Categories"], {
-                    categories: categories.filter((category)=>category.products.length > 0)
+                    categories: categories.filter((category)=>category.products.length > 0),
+                    activeCategoryId: Number(idx)
                 }, void 0, false, {
                     fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
-                    lineNumber: 54,
-                    columnNumber: 13
+                    lineNumber: 56,
+                    columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "counter-products",
-                    children: "Показано: 9 из 12 товаров"
-                }, void 0, false, {
+                    children: [
+                        "Показано: 9 из ",
+                        products.length,
+                        " товаров"
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
-                    lineNumber: 55,
+                    lineNumber: 60,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "products",
-                    children: products.slice(0, 2).map((product, i)=>category.id === product.categoryId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$product$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ProductCard"], {
+                    children: Number(idx) === 1 ? products.map((product, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$product$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ProductCard"], {
                             id: product.id,
                             title: product.name,
                             price: productsItemsPrice[i],
@@ -104,31 +110,47 @@ async function CategoryPage({ params: { idx } }) {
                             categoryId: product.categoryId
                         }, product.id, false, {
                             fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
-                            lineNumber: 60,
+                            lineNumber: 64,
+                            columnNumber: 29
+                        }, this)) : filteredProducts.map((product, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$product$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ProductCard"], {
+                            id: product.id,
+                            title: product.name,
+                            price: productsItemsPrice[i],
+                            oldPrice: productsItemsOldPrice[i],
+                            image: product.image,
+                            alt: product.alt,
+                            categoryId: product.categoryId
+                        }, product.id, false, {
+                            fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
+                            lineNumber: 76,
                             columnNumber: 29
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
-                    lineNumber: 56,
+                    lineNumber: 61,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "counter-products",
-                    children: "Показано: 9 из 12 товаров"
-                }, void 0, false, {
+                    children: [
+                        "Показано: 9 из ",
+                        products.length,
+                        " товаров"
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
-                    lineNumber: 74,
+                    lineNumber: 89,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$pagination$2d$shop$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["PaginationShop"], {}, void 0, false, {
                     fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
-                    lineNumber: 75,
+                    lineNumber: 90,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/(pages)/shop/category/[idx]/page.tsx",
-            lineNumber: 53,
+            lineNumber: 55,
             columnNumber: 13
         }, this)
     }, void 0, false);

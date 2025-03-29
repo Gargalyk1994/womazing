@@ -12,14 +12,15 @@ import { SheetFooter } from "../ui/sheet";
 import { CartSheetItem } from "./cart-sheet-item";
 import { getCartItemDetails } from "@/shared/lib/get-cart-item-details";
 import { ProductColor, ProductSize } from "@/shared/constants/products";
-import { useCart } from "@/shared/hooks";
+import { useCart, useSheetOpen } from "@/shared/hooks";
 
 interface Props {
     className?: string;
 }
 
 export const CartSheet: React. FC<React.PropsWithChildren<Props>> = ({children, className}) => {
-    const { totalAmount, updateItemQuantity, items, removeCartItem } = useCart()
+    const { totalAmount, updateItemQuantity, items, removeCartItem } = useCart();
+    const { isSheetOpen } = useSheetOpen();
     
     const onClickCountButton = (id: number, quantity: number, type: 'plus' | 'minus') => {
         const newQuantity = type === 'plus' ? quantity + 1 : quantity - 1;
@@ -27,7 +28,7 @@ export const CartSheet: React. FC<React.PropsWithChildren<Props>> = ({children, 
     };
 
     return ( 
-        <Sheet>
+        <Sheet open={isSheetOpen}>
             <SheetTrigger asChild>{children}</SheetTrigger>
             <SheetContent className="flex flex-col -bottom-12 justify-between pb-0 bg-[#fff]">
                 <SheetHeader className="text-[#000]">
