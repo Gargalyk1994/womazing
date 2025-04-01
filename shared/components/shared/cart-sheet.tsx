@@ -3,7 +3,6 @@
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
@@ -20,6 +19,14 @@ interface Props {
 
 export const CartSheet: React. FC<React.PropsWithChildren<Props>> = ({children, className}) => {
     const { totalAmount, updateItemQuantity, items, removeCartItem } = useCart();
+    // const [totalAmount, fetchCartItems, items] = useCartStore ((state) => [
+    //     state.totalAmount,
+    //     state.fetchCartItems, 
+    //     state.items]
+    // )
+    // useEffect(() => {
+    //     fetchCartItems();
+    // }, []);
     const { isSheetOpen } = useSheetOpen();
     
     const onClickCountButton = (id: number, quantity: number, type: 'plus' | 'minus') => {
@@ -28,7 +35,7 @@ export const CartSheet: React. FC<React.PropsWithChildren<Props>> = ({children, 
     };
 
     return ( 
-        <Sheet open={isSheetOpen}>
+        <Sheet>
             <SheetTrigger asChild>{children}</SheetTrigger>
             <SheetContent className="flex flex-col -bottom-12 justify-between pb-0 bg-[#fff]">
                 <SheetHeader className="text-[#000]">

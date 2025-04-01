@@ -12,7 +12,7 @@ export const CartButton: React. FC<Props> = ({ className }) => {
     
     return (
         <CartSheet>
-            <button className="header__cart">
+            <div className="header__cart">
                 <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                     <defs>
                         <clipPath id="clip4_808">
@@ -27,7 +27,7 @@ export const CartButton: React. FC<Props> = ({ className }) => {
                     </g>
                 </svg>
                 <span className="header__cart-counter">4</span>
-            </button>
+            </div>
         </CartSheet>
     );
 };

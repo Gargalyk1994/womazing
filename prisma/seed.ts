@@ -393,34 +393,13 @@ async function up() {
             },
         ],
     });
-    await prisma.cartItem.createMany({
-        data: [
+    await prisma.cartItem.create({
+        data:
             {
                 productItemId: 1,
                 cartId: 1,
                 quantity: 1
             },
-            {
-                productItemId: 5,
-                cartId: 1,
-                quantity: 1
-            },
-            {
-                productItemId: 8,
-                cartId: 1,
-                quantity: 4
-            },
-            {
-                productItemId: 2,
-                cartId: 1,
-                quantity: 2
-            },
-            {
-                productItemId: 3,
-                cartId: 1,
-                quantity: 3
-            },
-        ],
     });
 
     // await prisma.crumbs.createMany({

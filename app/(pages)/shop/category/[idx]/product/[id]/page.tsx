@@ -27,12 +27,6 @@ export default async function ProductPage({params: { id },} : { params: { id: st
         }
     })
 
-    const productItems = await prisma.productItem.findMany({
-        where: {
-            productId: Number(id),
-        },
-    });
-
     if (!product) {
         return notFound();
     }
@@ -48,11 +42,11 @@ export default async function ProductPage({params: { id },} : { params: { id: st
 
     return (
         <>
-            <ChooseProduct product={product} items={productItems} />
+            <ChooseProduct product={product}/>
             <section className="similar-products center">
                 <h3 className="similar-products__title">Связанные товары</h3>
                 <div className="similar-products__wrap products">
-                    {products.map((product, i) => ( 
+                    {products.slice(0, 2).map((product, i) => ( 
                         (
                             <ProductCard
                                 key={product.id}

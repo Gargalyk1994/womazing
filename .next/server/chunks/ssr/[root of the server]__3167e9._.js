@@ -66,11 +66,6 @@ async function ProductPage({ params: { id } }) {
             items: true
         }
     });
-    const productItems = await __TURBOPACK__imported__module__$5b$project$5d2f$prisma$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].productItem.findMany({
-        where: {
-            productId: Number(id)
-        }
-    });
     if (!product) {
         return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
     }
@@ -79,11 +74,10 @@ async function ProductPage({ params: { id } }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$choose$2d$product$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ChooseProduct"], {
-                product: product,
-                items: productItems
+                product: product
             }, void 0, false, {
                 fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                lineNumber: 51,
+                lineNumber: 45,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -94,12 +88,12 @@ async function ProductPage({ params: { id } }) {
                         children: "Связанные товары"
                     }, void 0, false, {
                         fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                        lineNumber: 53,
+                        lineNumber: 47,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "similar-products__wrap products",
-                        children: products.map((product, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$product$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ProductCard"], {
+                        children: products.slice(0, 2).map((product, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$product$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ProductCard"], {
                                 id: product.id,
                                 title: product.name,
                                 price: productsItemsPrice[i],
@@ -109,18 +103,18 @@ async function ProductPage({ params: { id } }) {
                                 categoryId: product.categoryId
                             }, product.id, false, {
                                 fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                                lineNumber: 57,
+                                lineNumber: 51,
                                 columnNumber: 29
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                        lineNumber: 54,
+                        lineNumber: 48,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                lineNumber: 52,
+                lineNumber: 46,
                 columnNumber: 13
             }, this)
         ]

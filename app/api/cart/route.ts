@@ -10,16 +10,12 @@ export async function GET(req: NextRequest) {
         const token = req.cookies.get("cartToken")?.value;
 
         if (!token) {
-            return NextResponse.json({ totalAmount: 0, items: [] });
+            return NextResponse.json({ totalAmount:0, items: [] });
         }
 
         const userCart = await prisma.cart.findFirst({
             where: {
-                OR: [
-                    {
-                        token,
-                    }
-                ],
+                token, 
             },
             include: {
                 cartItems: {

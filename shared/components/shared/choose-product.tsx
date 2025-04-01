@@ -13,35 +13,33 @@ import { useProductOptions, useSheetOpen } from "@/shared/hooks";
 import { BtnAddToCart } from "./btn-add-to-cart";
 import { useCartStore } from "@/shared/store";
 import { ProductWithRelations } from "@/@types/prisma";
-import { useState } from "react";
 
 interface Props {
     product: ProductWithRelations;
-    items: ProductItem[];
 }
 
 export const ChooseProduct: React.FC<Props> = ({
     product,
-    items,
 }) => {
     const { setIsSheetOpen } = useSheetOpen();
     const { size, color, currentItemId, setSize, setColor, availableProducts } =
-        useProductOptions(items);
+        useProductOptions(product.items);
 
     const addCartItem = useCartStore((state) => state.addCartItem );
 
-    const productPrice = items.find(
+    const productPrice = product.items.find(
         (item) => item.size === size && item.color === color
     )?.price;
-    const productOldPrice = items.find(
+    const productOldPrice = product.items.find(
         (item) => item.size === size && item.color === color
     )?.oldPrice;
-    
+    const firstItem = product.items[0];
 
     const onSubmit = async (productItemId: number) => {
         try {
+            const itemId = productItemId ?? firstItem.id;
             await addCartItem({
-                productItemId
+                productItemId: itemId
             });
         } catch(err) {
             console.error(err);
@@ -76,7 +74,7 @@ export const ChooseProduct: React.FC<Props> = ({
                     ) : null}
                 </div>
                 <VariantsSizes
-                    items={items}
+                    items={product.items}
                     sizes={sizesProducts}
                     onClick={(value) => setSize(Number(value) as ProductSize)}
                     selectedValue={String(size)}

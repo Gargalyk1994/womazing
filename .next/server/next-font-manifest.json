@@ -1,21 +1,15 @@
 {
   "app": {
-    "[project]/app/(main)/page": [
+    "[project]/app/(pages)/cart/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ],
-    "[project]/app/(pages)/cart/page": [
+    "[project]/app/(pages)/shop/category/[idx]/product/[id]/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ],
     "[project]/app/(pages)/shop/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ],
-    "[project]/app/(pages)/shop/category/[idx]/page": [
-      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
-    ],
-    "[project]/app/(pages)/brand/page": [
-      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
-    ],
-    "[project]/app/(pages)/shop/category/[idx]/product/[id]/page": [
+    "[project]/app/(pages)/shop/product/[id]/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ]
   },

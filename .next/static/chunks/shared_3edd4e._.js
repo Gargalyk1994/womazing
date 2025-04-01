@@ -2520,20 +2520,27 @@ var _s = __turbopack_context__.k.signature();
 const CartSheet = ({ children, className })=>{
     _s();
     const { totalAmount, updateItemQuantity, items, removeCartItem } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$cart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCart"])();
+    // const [totalAmount, fetchCartItems, items] = useCartStore ((state) => [
+    //     state.totalAmount,
+    //     state.fetchCartItems, 
+    //     state.items]
+    // )
+    // useEffect(() => {
+    //     fetchCartItems();
+    // }, []);
     const { isSheetOpen } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$sheet$2d$open$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSheetOpen"])();
     const onClickCountButton = (id, quantity, type)=>{
         const newQuantity = type === 'plus' ? quantity + 1 : quantity - 1;
         updateItemQuantity(id, newQuantity);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Sheet"], {
-        open: isSheetOpen,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SheetTrigger"], {
                 asChild: true,
                 children: children
             }, void 0, false, {
                 fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                lineNumber: 32,
+                lineNumber: 39,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SheetContent"], {
@@ -2549,19 +2556,19 @@ const CartSheet = ({ children, className })=>{
                                     children: items.length
                                 }, void 0, false, {
                                     fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                                    lineNumber: 35,
+                                    lineNumber: 42,
                                     columnNumber: 43
                                 }, this),
                                 " товара"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                            lineNumber: 35,
+                            lineNumber: 42,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                        lineNumber: 34,
+                        lineNumber: 41,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2579,17 +2586,17 @@ const CartSheet = ({ children, className })=>{
                                     onClickRemove: ()=>removeCartItem(item.id)
                                 }, void 0, false, {
                                     fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 49,
                                     columnNumber: 29
                                 }, this)
                             }, item.id, false, {
                                 fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                                lineNumber: 41,
+                                lineNumber: 48,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                        lineNumber: 39,
+                        lineNumber: 46,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SheetFooter"], {
@@ -2606,18 +2613,18 @@ const CartSheet = ({ children, className })=>{
                                             children: totalAmount
                                         }, void 0, false, {
                                             fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 69,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 68,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                                lineNumber: 60,
+                                lineNumber: 67,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2625,25 +2632,25 @@ const CartSheet = ({ children, className })=>{
                                 children: "Разместить заказ"
                             }, void 0, false, {
                                 fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                                lineNumber: 65,
+                                lineNumber: 72,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                        lineNumber: 59,
+                        lineNumber: 66,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-                lineNumber: 33,
+                lineNumber: 40,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/shared/components/shared/cart-sheet.tsx",
-        lineNumber: 31,
+        lineNumber: 38,
         columnNumber: 9
     }, this);
 };
@@ -2861,12 +2868,15 @@ __turbopack_context__.s({
     "CartButton": (()=>CartButton)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$cart$2d$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/shared/components/shared/cart-sheet.tsx [app-client] (ecmascript)");
+;
 ;
 ;
 const CartButton = ({ className })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$cart$2d$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CartSheet"], {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+            href: "./cart",
             className: "header__cart",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -3755,19 +3765,21 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const ChooseProduct = ({ product, items })=>{
+const ChooseProduct = ({ product })=>{
     _s();
     const { setIsSheetOpen } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$sheet$2d$open$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSheetOpen"])();
-    const { size, color, currentItemId, setSize, setColor, availableProducts } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$product$2d$options$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProductOptions"])(items);
+    const { size, color, currentItemId, setSize, setColor, availableProducts } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$hooks$2f$use$2d$product$2d$options$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProductOptions"])(product.items);
     const addCartItem = (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$store$2f$cart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"])({
         "ChooseProduct.useCartStore[addCartItem]": (state)=>state.addCartItem
     }["ChooseProduct.useCartStore[addCartItem]"]);
-    const productPrice = items.find((item)=>item.size === size && item.color === color)?.price;
-    const productOldPrice = items.find((item)=>item.size === size && item.color === color)?.oldPrice;
+    const productPrice = product.items.find((item)=>item.size === size && item.color === color)?.price;
+    const productOldPrice = product.items.find((item)=>item.size === size && item.color === color)?.oldPrice;
+    const firstItem = product.items[0];
     const onSubmit = async (productItemId)=>{
         try {
+            const itemId = productItemId ?? firstItem.id;
             await addCartItem({
-                productItemId
+                productItemId: itemId
             });
         } catch (err) {
             console.error(err);
@@ -3775,6 +3787,7 @@ const ChooseProduct = ({ product, items })=>{
     };
     const handleClickAdd = ()=>{
         if (currentItemId) {
+            console.log(currentItemId);
             onSubmit(currentItemId);
             setIsSheetOpen(true);
         }
@@ -3790,12 +3803,12 @@ const ChooseProduct = ({ product, items })=>{
                     className: "block-image__image"
                 }, void 0, false, {
                     fileName: "[project]/shared/components/shared/choose-product.tsx",
-                    lineNumber: 61,
+                    lineNumber: 60,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                lineNumber: 60,
+                lineNumber: 59,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3809,7 +3822,7 @@ const ChooseProduct = ({ product, items })=>{
                                 children: productPrice
                             }, void 0, false, {
                                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                                lineNumber: 70,
+                                lineNumber: 69,
                                 columnNumber: 25
                             }, this) : null,
                             productOldPrice ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3817,24 +3830,24 @@ const ChooseProduct = ({ product, items })=>{
                                 children: productOldPrice
                             }, void 0, false, {
                                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                                lineNumber: 73,
+                                lineNumber: 72,
                                 columnNumber: 25
                             }, this) : null
                         ]
                     }, void 0, true, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 68,
+                        lineNumber: 67,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$variants$2d$sizes$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VariantsSizes"], {
-                        items: items,
+                        items: product.items,
                         sizes: __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$constants$2f$products$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["sizesProducts"],
                         onClick: (value)=>setSize(Number(value)),
                         selectedValue: String(size),
                         size: size
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 78,
+                        lineNumber: 77,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$variants$2d$colors$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VariantsColors"], {
@@ -3843,26 +3856,26 @@ const ChooseProduct = ({ product, items })=>{
                         selectedValue: String(color)
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 85,
+                        lineNumber: 84,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$btn$2d$add$2d$to$2d$cart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BtnAddToCart"], {
                         onClickAddCart: handleClickAdd
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 90,
+                        lineNumber: 89,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/shared/components/shared/choose-product.tsx",
-                lineNumber: 67,
+                lineNumber: 66,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/shared/components/shared/choose-product.tsx",
-        lineNumber: 59,
+        lineNumber: 58,
         columnNumber: 9
     }, this);
 };
