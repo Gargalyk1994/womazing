@@ -32,7 +32,7 @@ export const ProductsGroupList: React.FC<Props> = ({
             <div className={cn("products", listClassName)}>
                 {items.map((product, i) => (
                     <ProductCard
-                        key={product.id}
+                        key={product.id+1}
                         id={product.id} 
                         title={product.name}
                         price={product.items.price}

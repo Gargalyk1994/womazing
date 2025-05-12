@@ -1838,13 +1838,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$lib$2f$calc$2d$car
 ;
 const getCartDetails = (data)=>{
     const cartItems = data.items.map((item)=>({
+            key: item.id + 444,
             id: item.id,
             quantity: item.quantity,
             name: item.productItem.product.name,
             imageUrl: item.productItem.product.image,
             price: (0, __TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$lib$2f$calc$2d$cart$2d$item$2d$total$2d$price$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["calcCartItemTotalPrice"])(item),
             productSize: item.productItem.size,
-            productColor: item.productItem.color
+            productColor: item.productItem.color,
+            disabled: false
         }));
     return {
         cartItems,
@@ -2348,7 +2350,7 @@ const CartSheet = ({ children, className })=>{
                                     lineNumber: 49,
                                     columnNumber: 29
                                 }, this)
-                            }, item.id, false, {
+                            }, item.id + 111, false, {
                                 fileName: "[project]/shared/components/shared/cart-sheet.tsx",
                                 lineNumber: 48,
                                 columnNumber: 25
@@ -3242,7 +3244,7 @@ const ProductsGroupList = ({ title, items, categoryId, listClassName, className 
                 image: product.image,
                 alt: product.alt,
                 categoryId: categoryId
-            }, product.id, false, {
+            }, product.id + 1, false, {
                 fileName: "[project]/shared/components/shared/products-group-list.tsx",
                 lineNumber: 34,
                 columnNumber: 21
@@ -3501,7 +3503,7 @@ const ChooseProduct = ({ product })=>{
                         onClick: (value)=>setSize(Number(value)),
                         selectedValue: String(size),
                         size: size
-                    }, void 0, false, {
+                    }, product.id + 222, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
                         lineNumber: 76,
                         columnNumber: 17
@@ -3510,16 +3512,16 @@ const ChooseProduct = ({ product })=>{
                         items: availableProducts,
                         onClick: (value)=>setColor(Number(value)),
                         selectedValue: String(color)
-                    }, void 0, false, {
+                    }, product.id + 333, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 83,
+                        lineNumber: 84,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$shared$2f$components$2f$shared$2f$btn$2d$add$2d$to$2d$cart$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BtnAddToCart"], {
                         onClickAddCart: handleClickAdd
                     }, void 0, false, {
                         fileName: "[project]/shared/components/shared/choose-product.tsx",
-                        lineNumber: 88,
+                        lineNumber: 90,
                         columnNumber: 17
                     }, this)
                 ]

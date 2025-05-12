@@ -2,11 +2,13 @@ import { CartDTO } from "../services/cart-dto";
 import { calcCartItemTotalPrice } from "./calc-cart-item-total-price";
 
 export type CartStateItem = {
+    key: number;
     id: number;
     quantity: number;
     name: string;
     imageUrl: string;
     price: number;
+    disabled?: boolean;
     productSize?: number | null;
     productColor?: number | null;
 };
@@ -23,6 +25,7 @@ interface ReturnProps {
  */
 export const getCartDetails = (data: CartDTO): ReturnProps => {
     const cartItems = data.items.map((item) => ({
+        key: item.id+444,
         id: item.id,
         quantity: item.quantity,
         name: item.productItem.product.name,
@@ -30,6 +33,7 @@ export const getCartDetails = (data: CartDTO): ReturnProps => {
         price: calcCartItemTotalPrice(item),
         productSize: item.productItem.size,
         productColor: item.productItem.color,
+        disabled: false
     })) as CartStateItem[];
 
     return {

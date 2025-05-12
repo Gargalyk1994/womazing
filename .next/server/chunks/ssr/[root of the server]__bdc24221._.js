@@ -30,9 +30,11 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/@prisma/client [external] (@prisma/client, cjs)");
 ;
-const globalForPrisma = global;
-const prisma = globalForPrisma.prisma || new __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__["PrismaClient"]();
-if ("TURBOPACK compile-time truthy", 1) globalForPrisma.prisma = prisma;
+const prismaClientSingleton = ()=>{
+    return new __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__["PrismaClient"]();
+};
+const prisma = globalThis.prismaGlobal ?? prismaClientSingleton();
+if ("TURBOPACK compile-time truthy", 1) globalThis.prismaGlobal = prisma;
 }}),
 "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -60,15 +62,6 @@ async function ProductPage({ params: { id } }) {
             id: Number(id)
         },
         include: {
-            category: {
-                include: {
-                    products: {
-                        include: {
-                            items: true
-                        }
-                    }
-                }
-            },
             items: true
         }
     });
@@ -88,7 +81,7 @@ async function ProductPage({ params: { id } }) {
                 product: product
             }, void 0, false, {
                 fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                lineNumber: 45,
+                lineNumber: 36,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -99,7 +92,7 @@ async function ProductPage({ params: { id } }) {
                         children: "Связанные товары"
                     }, void 0, false, {
                         fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                        lineNumber: 47,
+                        lineNumber: 38,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -114,18 +107,18 @@ async function ProductPage({ params: { id } }) {
                                 categoryId: product.categoryId
                             }, product.id, false, {
                                 fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                                lineNumber: 51,
+                                lineNumber: 42,
                                 columnNumber: 29
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                        lineNumber: 48,
+                        lineNumber: 39,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(pages)/shop/category/[idx]/product/[id]/page.tsx",
-                lineNumber: 46,
+                lineNumber: 37,
                 columnNumber: 13
             }, this)
         ]

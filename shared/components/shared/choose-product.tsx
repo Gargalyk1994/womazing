@@ -74,6 +74,7 @@ export const ChooseProduct: React.FC<Props> = ({
                     ) : null}
                 </div>
                 <VariantsSizes
+                    key={product.id+222}
                     items={product.items}
                     sizes={sizesProducts}
                     onClick={(value) => setSize(Number(value) as ProductSize)}
@@ -81,6 +82,7 @@ export const ChooseProduct: React.FC<Props> = ({
                     size={size}
                 />
                 <VariantsColors
+                    key={product.id+333}
                     items={availableProducts}
                     onClick={(value) => setColor(Number(value) as ProductColor)}
                     selectedValue={String(color)}

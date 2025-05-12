@@ -45,7 +45,7 @@ export const CartSheet: React. FC<React.PropsWithChildren<Props>> = ({children, 
                 {/** Items **/}
                 <div className="-mx-6 mt-5 overflow-auto flex-1">
                     {items.map((item) => (
-                        <div key={item.id} className="mb-2">
+                        <div key={item.id+111} className="mb-2">
                             <CartSheetItem
                                 id={item.id} 
                                 imageUrl={item.imageUrl} 

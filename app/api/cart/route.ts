@@ -10,12 +10,16 @@ export async function GET(req: NextRequest) {
         const token = req.cookies.get("cartToken")?.value;
 
         if (!token) {
-            return NextResponse.json({ totalAmount:0, items: [] });
+            return NextResponse.json({ totalAmount: 0, items: [] });
         }
 
         const userCart = await prisma.cart.findFirst({
             where: {
-                token, 
+                OR: [
+                    {
+                        token,
+                    },
+                ],
             },
             include: {
                 cartItems: {
@@ -58,7 +62,7 @@ export async function POST(req: NextRequest) {
         const findCartItem = await prisma.cartItem.findFirst({
             where: {
                 cartId: userCart.id,
-                productItemId: data.productItemId
+                productItemId: data.productItemId,
             },
         });
 
@@ -77,7 +81,7 @@ export async function POST(req: NextRequest) {
                 data: {
                     cartId: userCart.id,
                     productItemId: data.productItemId,
-                    quantity: 1
+                    quantity: 1,
                 },
             });
         }

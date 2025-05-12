@@ -1,3 +1,6 @@
 {
-  "/api/cart/route": "app/api/cart/route.js"
+  "/(main)/page": "app/(main)/page.js",
+  "/(pages)/cart/page": "app/(pages)/cart/page.js",
+  "/(pages)/shop/category/[idx]/product/[id]/page": "app/(pages)/shop/category/[idx]/product/[id]/page.js",
+  "/(pages)/shop/page": "app/(pages)/shop/page.js"
 }
